@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=1334">
+    <script>
+        function changeViewport() {
+          if (window.screen.width < 1334) {
+              var ratio = window.screen.width / 1334;
+              var metas = document.querySelectorAll("meta[name=viewport]");
+              for (var i in metas) {
+                  if (typeof metas[i].setAttribute == 'function') {
+                      metas[i].setAttribute('content', 'width=1334, initial-scale=' + ratio + ', maximum-scale=' + ratio + '');
+                  }
+              }
+          }
+        }
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", changeViewport, false);
+    </script>
+    <link rel="stylesheet" href="/pages/index/index.css">
+  </head>
+  <body>
+    <nav class="nav">
+  <ul>
+    <li id="nav-sence">查看实景</li>
+    <li>我要订餐</li>
+    <li id="nav-center">个人中心</li>
+  </ul>
+</nav>
+    <nav class="menu">
+  <ul>
+    <li>采集</li>
+    <li>篮子</li>
+    <li>化肥</li>
+    <li>锄头</li>
+  </ul>
+</nav>
+    <section class="storehouse-icon">仓库</section>
+    <section class="name">
+	<div class="name-sum"></div>
+	<img class="name-photo" src="/modules/name/img/photo.png" alt="">
+	<div class="name-main">
+		<p>¥160/亩</p>
+		<h1>黑土地农场</h1>
+		<ul class="name-star">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="name-icon"></div>
+</section>
+    <section class="farm">
+	<ul>
+		<li>
+			<div class="farm-persimmon"></div>
+		</li>
+		<li>
+			<div class="farm-persimmon"></div>
+		</li>
+		<li>
+			<div class="farm-persimmon"></div>
+		</li>
+		<li>
+			<div class="farm-persimmon"></div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<div class="farm-floor empty"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-cabbage"></div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-corn"></div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<div class="farm-floor empay"></div>
+			<div class="farm-flower"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-flower"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-flower"></div>
+		</li>
+		<li>
+			<div class="farm-floor"></div>
+			<div class="farm-flower"></div>
+		</li>
+	</ul>
+</section>
+    <div class="mask hide"></div>
+
+    <section class="center dialog hide">
+	<div class="dialog-close"></div>
+	<div class="center-c1">
+		<div class="center-person">
+			<div class="center-photo">
+				<img src="/modules/center/img/photo.png" alt="">
+			</div>
+			<div class="center-text">
+				<h2>Mrs. 小水果</h2>
+				<p>等级:40</p>
+			</div>
+		</div>
+		<ul>
+			<li id="center-focus" class="active">我关注的</li>
+			<li id="center-infor">个人信息</li>
+			<li id="center-notice">系统公告</li>
+		</ul>
+	</div>
+	<div class="center-c2">
+		 <section class="center-focus">
+	<ul>
+		<li><img src="/modules/center-focus/img/icon1.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon2.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon3.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon4.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon5.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon6.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon7.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon8.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon9.png" alt=""></li>
+		<li><img src="/modules/center-focus/img/icon10.png" alt=""></li>
+	</ul>
+</section>
+		 <section class="center-infor center-bg hide">
+	<ul>
+		<li><span>账号昵称:</span>Mrs.小水果</li>
+		<li><span>账号ID:</span>NC3841039</li>
+		<li><span>注册时间:</span>2016-01-01</li>
+		<li><span>手机号:</span>1841759312</li>
+		<li><span>拥有农场:</span>3</li>
+	</ul>
+</section>
+		 <section class="center-notice center-bg hide">
+	<ul>
+		<li>
+			<div class="center-notice-icon"></div>
+			<div class="center-notice-text">
+				<h2>您预定的农场可以收获了</h2>
+				<p>恭喜~您预定的黑土地农场玉米已经成熟,可以将其收获了.</p>
+			</div>
+		</li>
+		<li>
+			<div class="center-notice-icon"></div>
+			<div class="center-notice-text">
+				<h2>如何玩转农场</h2>
+				<p>想要体验农夫的生活吗，想要享受清新的空气和明媚的阳光吗，快来农场吧。</p>
+			</div>
+		</li>
+	</ul>
+</section>
+	</div>
+</section>
+    <section class="sence dialog hide">
+	<div class="dialog-close"></div>
+	<header>
+		<h1>庄园实景</h1>
+	</header>
+	<ul>
+		<li><img src="/modules/sence/img/img1.png" alt=""></li>
+		<li><img src="/modules/sence/img/img2.png" alt=""></li>
+		<li><img src="/modules/sence/img/img3.png" alt=""></li>
+		<li><img src="/modules/sence/img/img4.png" alt=""></li>
+		<li><img src="/modules/sence/img/img5.png" alt=""></li>
+		<li><img src="/modules/sence/img/img6.png" alt=""></li>
+		<li><img src="/modules/sence/img/img7.png" alt=""></li>
+		<li><img src="/modules/sence/img/img8.png" alt=""></li>
+	</ul>
+</section>
+    <section class="reclaim dialog hide">
+	<div class="dialog-close"></div>
+	<header>
+		<h1 class="reclaim-estate-title hide">庄园开垦</h1>
+		<h1 class="reclaim-farm-title">农场开垦</h1>
+	</header>
+	<div class="reclaim-r1">
+		<div class="estate-r1c1">
+			<ul>
+				<li><img src="/modules/reclaim/img/img1.png" alt=""></li>
+				<li><img src="/modules/reclaim/img/img2.png" alt=""></li>
+				<li><img src="/modules/reclaim/img/img3.png" alt=""></li>
+			</ul>
+		</div>
+		<div class="reclaim-r1c2">
+			<ul class="reclaim-estate hide">
+	<li><span>农场类型</span>水果庄园<div class="reclaim-estate-focus">关注</div></li>
+	<li><span>农场面积</span>24亩</li>
+	<li><span>出售数量</span>3</li>
+	<li><span>农场位置</span>上海市松江区</li>
+	<li><span>宣传图片</span>
+		<ul class="reclaim-estate-photo">
+			<li><img src="/modules/reclaim-estate/img/img1.png" alt=""></li>
+			<li><img src="/modules/reclaim-estate/img/img2.png" alt=""></li>
+			<li><img src="/modules/reclaim-estate/img/img3.png" alt=""></li>
+		</ul>
+	</li>
+</ul>
+			<section class="reclaim-farm">
+	<ul class="reclaim-farm-selects">
+		<li>
+			<select>
+				<option value="">按照类型</option>
+			</select>
+		</li>
+		<li>
+			<select>
+				<option value="">按照面积</option>
+			</select>
+		</li>
+		<li>
+			<select>
+				<option value="">按照位置</option>
+			</select>
+		</li>
+	</ul>
+	<ul class="reclaim-farm-list">
+		<li>
+			<div class="reclaim-farm-list-c1">
+				<img src="/modules/reclaim-farm/img/img1.png" alt="">
+			</div>
+			<div class="reclaim-farm-list-c2">
+				<h2>三只母鸡农场</h2>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+			</div>
+			<div class="reclaim-farm-list-c3">
+				<div class="reclaim-farm-price">¥200/亩</div>
+				<div class="reclaim-farm-comment">4123评价</div>
+			</div>
+		</li>
+		<li>
+			<div class="reclaim-farm-list-c1">
+				<img src="/modules/reclaim-farm/img/img2.png" alt="">
+			</div>
+			<div class="reclaim-farm-list-c2">
+				<h2>苹果妹妹农场</h2>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+			</div>
+			<div class="reclaim-farm-list-c3">
+				<div class="reclaim-farm-price">¥180/亩</div>
+				<div class="reclaim-farm-comment">3481评价</div>
+			</div>
+		</li>
+		<li>
+			<div class="reclaim-farm-list-c1">
+				<img src="/modules/reclaim-farm/img/img3.png" alt="">
+			</div>
+			<div class="reclaim-farm-list-c2">
+				<h2>小麦田农场</h2>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+				<div class="reclaim-farm-star"></div>
+			</div>
+			<div class="reclaim-farm-list-c3">
+				<div class="reclaim-farm-price">¥160/亩</div>
+				<div class="reclaim-farm-comment">3123评价</div>
+			</div>
+		</li>
+	</ul>
+</section>
+		</div>
+	</div>
+</section>
+    <section class="storehouse dialog hide">
+	<div class="dialog-close"></div>
+	<header>
+		<h1 class="storehouse-title">仓库</h1>
+	</header>
+	<div class="storehouse-r1">
+		<div class="storehouse-r1c1">
+			<ul class="storehouse-tab">
+				<li class="active">水果</li>
+				<li>蔬菜</li>
+				<li>粮食</li>
+				<li>其他</li>
+			</ul>
+		</div>
+		<div class="storehouse-r1c2">
+			<ul class="storehouse-list">
+				<li><img src="/modules/storehouse/img/img1.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img2.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img3.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img4.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img5.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img6.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img7.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img8.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img9.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img10.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img11.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img12.png" alt=""></li>
+			</ul>
+			<ul class="storehouse-list hide">
+				<li><img src="/modules/storehouse/img/img1.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img2.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img3.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img4.png" alt=""></li>
+			</ul>
+			<ul class="storehouse-list hide">
+				<li><img src="/modules/storehouse/img/img5.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img6.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img7.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img8.png" alt=""></li>
+			</ul>
+			<ul class="storehouse-list hide">
+				<li><img src="/modules/storehouse/img/img9.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img10.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img11.png" alt=""></li>
+				<li><img src="/modules/storehouse/img/img12.png" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</section>
+    <script src="/vender/zepto.min.js"></script>
+    <script src="/pages/index/index.js"></script>
+  </body>
+</html>
